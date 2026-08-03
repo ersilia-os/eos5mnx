@@ -12,35 +12,27 @@ Description: SAND (Shape Aware Neural Descriptor) turns a molecules 2D structure
   shape overlap.
 Deployment:
   - Local
-  - Online
-Source: Local, Online
-Source Type: Internal, Replicated, External
-Task: Annotation, Representation, Sampling
-Subtask: Property calculation or prediction, Activity prediction, Featurization,
-  Projection, Similarity search, Generation
+Source: Local
+Source Type: External
+Task: Representation
+Subtask: Featurization
 Input:
   - Compound
 Input Dimension: 1
 Output:
   - Value
-  - Score
-  - Compound
-  - Text
-Output Dimension: 1
-Output Consistency: Fixed, Variable
-Interpretation: The output of this template model should be interpreted like 
-  this.
+Output Dimension: 512
+Output Consistency: Fixed
+Interpretation: 512-dimensional shape-aware embedding whose cosine similarity approximates 3D molecular shape overlap
 Tag:
   - Descriptor
   - Embedding
   - Similarity
 Biomedical Area:
-  - Biomedical Area 1
-  - Biomedical Area 2
+  - Any
 Target Organism:
-  - Target Organism 1
-  - Target Organism 2
-Publication Type: Peer reviewed, Preprint, Other
+  - Any
+Publication Type: Preprint
 Publication Year: 2026
 Publication: 
   https://openreview.net/pdf/d73f7968fdf4280552d4d362061881c3b032a52c.pdf
