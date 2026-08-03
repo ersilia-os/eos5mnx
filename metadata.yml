@@ -1,33 +1,39 @@
-Identifier: eos0aaa
-Slug: template-model
+Identifier: eos5mnx
+Slug: sand-shape-descriptor
 Status: In progress
-Title: This is a template model
-Description: |
-  This is a description of the template model.
-  You can use multiple lines in this description.
+Title: SAND Shape-Aware Descriptor
+Description: SAND (Shape Aware Neural Descriptor) turns a molecules 2D structure
+  into a compact fixed-length embedding that captures its 3D shape without 
+  generating any conformers. The resulting vector enables rapid retrieval of 
+  shape-similar molecules for ligand-based virtual screening, and serves as a 
+  general-purpose descriptor for downstream similarity search and 
+  property-prediction tasks. Trained by Pfizer (ICML 2026); GINE graph encoder 
+  producing a 512-dimensional embedding whose cosine similarity approximates 3D 
+  shape overlap.
 Deployment:
   - Local
   - Online
 Source: Local, Online
 Source Type: Internal, Replicated, External
 Task: Annotation, Representation, Sampling
-Subtask: Property calculation or prediction, Activity prediction, Featurization, Projection, Similarity search, Generation
-Input: 
+Subtask: Property calculation or prediction, Activity prediction, Featurization,
+  Projection, Similarity search, Generation
+Input:
   - Compound
 Input Dimension: 1
-Output: 
+Output:
   - Value
   - Score
   - Compound
   - Text
 Output Dimension: 1
 Output Consistency: Fixed, Variable
-Interpretation: |
-  The output of this template model should be interpreted like this.
+Interpretation: The output of this template model should be interpreted like 
+  this.
 Tag:
-  - Tag 1
-  - Tag 2
-  - Tag 3
+  - Descriptor
+  - Embedding
+  - Similarity
 Biomedical Area:
   - Biomedical Area 1
   - Biomedical Area 2
@@ -36,6 +42,8 @@ Target Organism:
   - Target Organism 2
 Publication Type: Peer reviewed, Preprint, Other
 Publication Year: 2026
-Publication: https://example.com
-Source Code: https://example.com
-License: GPL-3.0-or-later, MIT, Apache-2.0...
+Publication: 
+  https://openreview.net/pdf/d73f7968fdf4280552d4d362061881c3b032a52c.pdf
+Source Code: https://github.com/pfizer-opensource/SAND
+License: Apache-2.0
+Contributor: TiagoJanela
