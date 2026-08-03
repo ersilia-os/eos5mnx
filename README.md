@@ -2,6 +2,7 @@
 
 SAND (Shape Aware Neural Descriptor) turns a molecules 2D structure into a compact fixed-length embedding that captures its 3D shape without generating any conformers. The resulting vector enables rapid retrieval of shape-similar molecules for ligand-based virtual screening, and serves as a general-purpose descriptor for downstream similarity search and property-prediction tasks. Trained by Pfizer (ICML 2026); GINE graph encoder producing a 512-dimensional embedding whose cosine similarity approximates 3D shape overlap.
 
+This model was incorporated on 2026-08-03.
 
 
 ## Information
@@ -43,8 +44,11 @@ _10 of 512 columns are shown_
 ### Source and Deployment
 - **Source:** `Local`
 - **Source Type:** `External`
+- **S3 Storage**: [https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos5mnx.zip](https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos5mnx.zip)
 
 ### Resource Consumption
+- **Model Size (Mb):** `321`
+- **Environment Size (Mb):** `1408`
 
 
 ### References
