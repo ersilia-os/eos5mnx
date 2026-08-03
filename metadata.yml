@@ -23,7 +23,8 @@ Output:
   - Value
 Output Dimension: 512
 Output Consistency: Fixed
-Interpretation: 512-dimensional shape-aware embedding whose cosine similarity approximates 3D molecular shape overlap
+Interpretation: 512-dimensional shape-aware embedding whose cosine similarity 
+  approximates 3D molecular shape overlap
 Tag:
   - Descriptor
   - Embedding
@@ -39,3 +40,4 @@ Publication:
 Source Code: https://github.com/pfizer-opensource/SAND
 License: Apache-2.0
 Contributor: TiagoJanela
+Incorporation Date: '2026-08-03'
