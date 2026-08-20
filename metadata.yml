@@ -2,14 +2,7 @@ Identifier: eos5mnx
 Slug: sand-shape-descriptor
 Status: Ready
 Title: SAND Shape-Aware Descriptor
-Description: SAND (Shape Aware Neural Descriptor) turns a molecules 2D structure
-  into a compact fixed-length embedding that captures its 3D shape without 
-  generating any conformers. The resulting vector enables rapid retrieval of 
-  shape-similar molecules for ligand-based virtual screening, and serves as a 
-  general-purpose descriptor for downstream similarity search and 
-  property-prediction tasks. Trained by Pfizer (ICML 2026); GINE graph encoder 
-  producing a 512-dimensional embedding whose cosine similarity approximates 3D 
-  shape overlap.
+Description: SAND compresses a molecule's three-dimensional shape into 512 features without generating a single conformer. Winter and colleagues at Pfizer trained the model to reproduce shape similarity computed from explicit 3D alignment, so that the expensive conformational sampling normally required for shape-based screening is replaced by one pass over the 2D graph. This makes shape comparison tractable across libraries of billions of compounds, at the cost of approximating rather than computing the underlying geometry.
 Deployment:
   - Local
 Source: Local
@@ -23,8 +16,7 @@ Output:
   - Value
 Output Dimension: 512
 Output Consistency: Fixed
-Interpretation: 512-dimensional shape-aware embedding whose cosine similarity 
-  approximates 3D molecular shape overlap
+Interpretation: 512 features approximating three-dimensional molecular shape from the 2D structure.
 Tag:
   - Descriptor
   - Embedding
@@ -35,8 +27,7 @@ Target Organism:
   - Any
 Publication Type: Preprint
 Publication Year: 2026
-Publication: 
-  https://openreview.net/pdf/d73f7968fdf4280552d4d362061881c3b032a52c.pdf
+Publication: https://openreview.net/forum?id=pB6WAdnRDR
 Source Code: https://github.com/pfizer-opensource/SAND
 License: Apache-2.0
 Contributor: TiagoJanela

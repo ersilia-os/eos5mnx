@@ -1,6 +1,6 @@
 # SAND Shape-Aware Descriptor
 
-SAND (Shape Aware Neural Descriptor) turns a molecules 2D structure into a compact fixed-length embedding that captures its 3D shape without generating any conformers. The resulting vector enables rapid retrieval of shape-similar molecules for ligand-based virtual screening, and serves as a general-purpose descriptor for downstream similarity search and property-prediction tasks. Trained by Pfizer (ICML 2026); GINE graph encoder producing a 512-dimensional embedding whose cosine similarity approximates 3D shape overlap.
+SAND compresses a molecule's three-dimensional shape into 512 features without generating a single conformer. Winter and colleagues at Pfizer trained the model to reproduce shape similarity computed from explicit 3D alignment, so that the expensive conformational sampling normally required for shape-based screening is replaced by one pass over the 2D graph. This makes shape comparison tractable across libraries of billions of compounds, at the cost of approximating rather than computing the underlying geometry.
 
 This model was incorporated on 2026-08-03.Last packaged on 2026-08-03.
 
@@ -23,7 +23,7 @@ This model was incorporated on 2026-08-03.Last packaged on 2026-08-03.
 ### Output
 - **Output Dimension:** `512`
 - **Output Consistency:** `Fixed`
-- **Interpretation:** 512-dimensional shape-aware embedding whose cosine similarity approximates 3D molecular shape overlap
+- **Interpretation:** 512 features approximating three-dimensional molecular shape from the 2D structure.
 
 Below are the **Output Columns** of the model:
 | Name | Type | Direction | Description |
@@ -59,7 +59,7 @@ _10 of 512 columns are shown_
 
 ### References
 - **Source Code**: [https://github.com/pfizer-opensource/SAND](https://github.com/pfizer-opensource/SAND)
-- **Publication**: [https://openreview.net/pdf/d73f7968fdf4280552d4d362061881c3b032a52c.pdf](https://openreview.net/pdf/d73f7968fdf4280552d4d362061881c3b032a52c.pdf)
+- **Publication**: [https://openreview.net/forum?id=pB6WAdnRDR](https://openreview.net/forum?id=pB6WAdnRDR)
 - **Publication Type:** `Preprint`
 - **Publication Year:** `2026`
 - **Ersilia Contributor:** [TiagoJanela](https://github.com/TiagoJanela)
