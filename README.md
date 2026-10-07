@@ -1,6 +1,6 @@
 # SAND Shape-Aware Descriptor
 
-SAND compresses a molecule's three-dimensional shape into 512 features without generating a single conformer. Winter and colleagues at Pfizer trained the model to reproduce shape similarity computed from explicit 3D alignment, so that the expensive conformational sampling normally required for shape-based screening is replaced by one pass over the 2D graph. This makes shape comparison tractable across libraries of billions of compounds, at the cost of approximating rather than computing the underlying geometry.
+SAND compresses a molecule's three-dimensional shape into 512 numbers without generating a single conformer. Winter and colleagues at Pfizer trained a GINE graph neural network with a rank-preserving contrastive objective, so cosine similarity between the L2-normalised embeddings tracks ROCS shape overlap with a correlation of 0.86. That makes shape-based screening tractable across libraries of billions of compounds. Ersilia serves the uncompressed embedding rather than the quantised search index, and the vector approximates rather than computes the underlying geometry.
 
 This model was incorporated on 2026-08-03.Last packaged on 2026-08-03.
 
@@ -23,7 +23,7 @@ This model was incorporated on 2026-08-03.Last packaged on 2026-08-03.
 ### Output
 - **Output Dimension:** `512`
 - **Output Consistency:** `Fixed`
-- **Interpretation:** 512 features approximating three-dimensional molecular shape from the 2D structure.
+- **Interpretation:** 512-dimensional shape-aware embedding whose cosine similarity approximates three-dimensional molecular shape overlap.
 
 Below are the **Output Columns** of the model:
 | Name | Type | Direction | Description |
