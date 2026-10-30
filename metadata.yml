@@ -2,14 +2,14 @@ Identifier: eos5mnx
 Slug: sand-shape-descriptor
 Status: Ready
 Title: SAND Shape-Aware Descriptor
-Description: SAND compresses a molecule's three-dimensional shape into 512 numbers
-  without generating a single conformer. Winter and colleagues at Pfizer trained a
-  GINE graph neural network with a rank-preserving contrastive objective, so cosine
-  similarity between the L2-normalised embeddings tracks ROCS shape overlap with a
-  correlation of 0.86. That makes shape-based screening tractable across libraries
-  of billions of compounds. Ersilia serves the uncompressed embedding rather than
-  the quantised search index, and the vector approximates rather than computes the
-  underlying geometry.
+Description: SAND compresses a molecules three-dimensional shape into 512 
+  numbers without generating a single conformer. Winter and colleagues at Pfizer
+  trained a GINE graph neural network with a rank-preserving contrastive 
+  objective, so cosine similarity between the L2-normalised embeddings tracks 
+  ROCS shape overlap with a correlation of 0.86. That makes shape-based 
+  screening tractable across libraries of billions of compounds. Ersilia serves 
+  the uncompressed embedding rather than the quantised search index, and the 
+  vector approximates rather than computes the underlying geometry.
 Deployment:
   - Local
 Source: Local
@@ -23,8 +23,8 @@ Output:
   - Value
 Output Dimension: 512
 Output Consistency: Fixed
-Interpretation: 512-dimensional shape-aware embedding whose cosine similarity approximates
-  three-dimensional molecular shape overlap.
+Interpretation: 512-dimensional shape-aware embedding whose cosine similarity 
+  approximates three-dimensional molecular shape overlap.
 Tag:
   - Descriptor
   - Embedding
@@ -41,7 +41,7 @@ License: Apache-2.0
 Contributor: TiagoJanela
 Incorporation Date: '2026-08-03'
 Last Packaging Date: '2026-08-03'
-Release: v1.0.0
+Release: v1.0.1
 S3: https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos5mnx.zip
 DockerHub: https://hub.docker.com/r/ersiliaos/eos5mnx
 Docker Architecture:
